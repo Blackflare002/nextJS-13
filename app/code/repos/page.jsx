@@ -9,6 +9,9 @@ async function fetchRepos() {
 	const response = await fetch(
 		"https://api.github.com/users/Blackflare002/repos"
 	);
+	await new Promise((resolve) =>
+		setTimeout(resolve, 1000)
+	); //wait 1 sec
 	const repos = await response.json();
 	return repos;
 } //a normal fetch request
