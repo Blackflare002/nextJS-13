@@ -7,7 +7,12 @@ import {
 
 async function fetchRepos() {
 	const response = await fetch(
-		"https://api.github.com/users/Blackflare002/repos"
+		"https://api.github.com/users/Blackflare002/repos",
+		{
+			next: {
+				revalidate: 60,
+			},
+		}
 	);
 	await new Promise((resolve) =>
 		setTimeout(resolve, 1000)

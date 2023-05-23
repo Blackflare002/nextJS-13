@@ -7,7 +7,12 @@ import {
 
 async function fetchRepo(name) {
 	const response = await fetch(
-		`https://api.github.com/repos/Blackflare002/${name}`
+		`https://api.github.com/repos/Blackflare002/${name}`,
+		{
+			next: {
+				revalidate: 60,
+			},
+		}
 	);
 	const repo = await response.json();
 	return repo;
