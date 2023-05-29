@@ -6,12 +6,12 @@ const CourseSearch = ({ getSearchResults }) => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		const res = await fetch(
-			`/api/courses/search?query=${query}`
+			`https://next-js-13-beta.vercel.app/api/courses/search?query=${query}`
 		);
 		const courses = await res.json();
 		getSearchResults(courses); //this function is defined in app/page.jsx.
-        //Call the function here with the result of the fetch as its argument.
-        //This component is imported to and implemented in page.jsx, where it changes a state variable, courses, to the result of this fetch.
+		//Call the function here with the result of the fetch as its argument.
+		//This component is imported to and implemented in page.jsx, where it changes a state variable, courses, to the result of this fetch.
 	};
 	return (
 		<form
