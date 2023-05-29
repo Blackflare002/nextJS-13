@@ -6,7 +6,7 @@ const CourseSearch = ({ getSearchResults }) => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		const res = await fetch(
-			`https://next-js-13-beta.vercel.app/api/courses/search?query=${query}`
+			`https://next-js-13-e51vdxrem-blackflare002.vercel.app/api/courses/search?query=${query}`
 			// `/api/courses/search?query=${query}`
 		);
 		const courses = await res.json();
