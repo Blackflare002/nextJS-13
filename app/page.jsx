@@ -11,7 +11,7 @@ const HomePage = () => {
 	useEffect(() => {
 		const fetchCourses = async () => {
 			const res = await fetch(
-				"next-js-13-blue.vercel.app/api/courses"
+				"/api/courses"
 				// "/api/courses"
 			); //gets the courses data
 			const data = await res.json();
