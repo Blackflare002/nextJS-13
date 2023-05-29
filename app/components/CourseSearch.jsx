@@ -7,6 +7,7 @@ const CourseSearch = ({ getSearchResults }) => {
 		e.preventDefault();
 		const res = await fetch(
 			`https://next-js-13-beta.vercel.app/api/courses/search?query=${query}`
+			// `/api/courses/search?query=${query}`
 		);
 		const courses = await res.json();
 		getSearchResults(courses); //this function is defined in app/page.jsx.
