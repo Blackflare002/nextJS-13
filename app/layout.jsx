@@ -2,7 +2,7 @@ import "./globals.css";
 import Header from "./components/Header";
 import { Poppins } from "next/font/google";
 import Head from "next/head";
-// import img from "../public/next.png";
+// import img from "./opengraph-image.png";
 
 const poppins = Poppins({
 	weight: ["400", "700"], //font weight options
@@ -18,7 +18,7 @@ export const metadata = {
 		siteName: "Next.js",
 		images: [
 			{
-				url: "../public/next.png",
+				url: "./opengraph-image.png",
 				width: 800,
 				height: 600,
 			},
@@ -28,7 +28,10 @@ export const metadata = {
 	},
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({
+	children,
+	img,
+}) {
 	return (
 		<html lang="en">
 			<body className={poppins.className}>
@@ -60,15 +63,19 @@ export default function RootLayout({ children }) {
 					/>
 					<meta
 						property="og:image"
-						content="../public/next.png"
+						content="<generated>"
+					/>
+					<meta
+						property="og:image:type"
+						content="<generated>"
 					/>
 					<meta
 						property="og:image:width"
-						content="800"
+						content="<generated>"
 					/>
 					<meta
 						property="og:image:height"
-						content="600"
+						content="<generated>"
 					/>
 					<meta
 						property="og:type"
