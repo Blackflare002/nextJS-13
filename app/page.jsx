@@ -1,8 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import LoadingPage from "./loading";
-import Link from "next/link";
-import Courses from "./components/courses";
+import Courses from "./components/Courses";
 import CourseSearch from "./components/CourseSearch";
 
 const HomePage = () => {
@@ -13,6 +12,7 @@ const HomePage = () => {
 		const fetchCourses = async () => {
 			const res = await fetch(
 				"https://next-js-13-beta.vercel.app/api/courses"
+				// "/api/courses"
 			); //gets the courses data
 			const data = await res.json();
 			setCourses(data); //puts the data in a State variable
