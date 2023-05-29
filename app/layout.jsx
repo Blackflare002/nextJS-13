@@ -26,9 +26,14 @@ export default function RootLayout({ children }) {
 		<html lang="en">
 			<body className={poppins.className}>
 				<Head>
+					<meta property="title" content="Next" />
 					<meta
 						property="og:title"
 						content="Next"
+					/>
+					<meta
+						property="description"
+						content="A JavaScript framework"
 					/>
 					<meta
 						property="og:description"
@@ -47,7 +52,7 @@ export default function RootLayout({ children }) {
 						content="en_US"
 					/>
 					<meta
-						property="og:image:url"
+						property="og:image"
 						content="../public/next.png"
 					/>
 					<meta
