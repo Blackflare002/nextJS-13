@@ -12,7 +12,6 @@ const HomePage = () => {
 		const fetchCourses = async () => {
 			const res = await fetch(
 				"/api/courses"
-				// "/api/courses"
 			); //gets the courses data
 			const data = await res.json();
 			setCourses(data); //puts the data in a State variable
