@@ -3,9 +3,9 @@ import { useState, useEffect } from "react";
 import LoadingPage from "./loading";
 import Link from "next/link";
 import Courses from "./components/courses";
+import CourseSearch from "./components/CourseSearch";
 
 const HomePage = () => {
-	//client-side components are more interactive, require regular React stuff like useEffect and useState
 	const [courses, setCourses] = useState([]);
 	const [loading, setLoading] = useState(true);
 
@@ -25,8 +25,13 @@ const HomePage = () => {
 	return (
 		<>
 			<h1>Welcome to Hell</h1>
+			<CourseSearch
+				getSearchResults={(results) =>
+					setCourses(results)
+				}
+				// the getSearchResults function is defined here, used in the CourseSearch component
+			/>
 			<Courses courses={courses} />
-			{/* data is no longer fetched in Courses.jsx, it's fetched here and passed into Courses.jsx as a prop, both her and on the Courses.jsx page */}
 		</>
 	);
 };
