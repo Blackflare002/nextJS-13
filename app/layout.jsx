@@ -1,6 +1,7 @@
 import "./globals.css";
 import Header from "./components/Header";
 import { Poppins } from "next/font/google";
+// import img from "../public/next.png";
 
 const poppins = Poppins({
 	weight: ["400", "700"], //font weight options
@@ -10,6 +11,13 @@ const poppins = Poppins({
 export const metadata = {
 	title: "Next",
 	description: "A JavaScript framework",
+	openGraph: {
+		images: {
+			url: "../public/next.png",
+			width: 800,
+			height: 600,
+		},
+	},
 };
 
 export default function RootLayout({ children }) {
