@@ -9,17 +9,24 @@ const poppins = Poppins({
 	subsets: ["latin"],
 });
 
-// export const metadata = {
-// 	title: "Next",
-// 	description: "A JavaScript framework",
-// 	openGraph: {
-// 		images: {
-// 			url: "../public/next.png",
-// 			width: 800,
-// 			height: 600,
-// 		},
-// 	},
-// };
+export const metadata = {
+	title: "Next",
+	description: "A JavaScript framework",
+	openGraph: {
+		title: "Next",
+		description: "A JavaScript framework",
+		siteName: "Next.js",
+		images: [
+			{
+				url: "../public/next.png",
+				width: 800,
+				height: 600,
+			},
+		],
+		locale: "en_US",
+		type: "website",
+	},
+};
 
 export default function RootLayout({ children }) {
 	return (
